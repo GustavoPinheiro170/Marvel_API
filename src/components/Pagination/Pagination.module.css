@@ -1,0 +1,52 @@
+
+.pagination span{
+    margin: 0 10px ;
+    cursor: pointer;
+}
+.pagination span:hover{
+    color: red;
+    cursor: pointer;
+}
+.pagination::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+.showAll{
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+
+}
+.showAll:hover{
+    color: teal;
+    cursor: pointer;
+}
+
+.containerPagination{
+    position: relative;
+    background: white;
+}
+.containerPagination{
+    text-align: center;
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+}
+.containerPagination span {
+    margin: 10px;
+    color: gray;
+}
+.next ,
+.back {
+    cursor: pointer;
+    transition: .2;
+}
+.next:hover, 
+.back:hover{
+    color: red;
+}
+.actualyPage{
+    border-bottom: 1px solid gray;
+}

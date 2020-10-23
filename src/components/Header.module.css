@@ -1,0 +1,14 @@
+.Header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 95px;
+    background-color: #ed1d24;
+    margin-bottom: 30px;
+}
+.Header img {
+    position: absolute;
+    float: left;
+    width: 240px;
+    height: 95px;
+}

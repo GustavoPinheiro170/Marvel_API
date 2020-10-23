@@ -1,0 +1,109 @@
+.App{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 20px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 3%;
+    background-color: white;
+    box-shadow: 0 2px 6px 0 rgba(69, 91, 99, 0.08);
+    border-radius: 20px;
+    
+}
+
+
+.cardPerson{
+    position: relative;
+    width: 250px;
+    height: 220px;
+    border-radius: 8px;
+    border: solid 1px #d8dde6;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ed1d24;
+    padding: 10px;
+    transition: .3s;
+}
+
+.cardPerson:hover::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    transform: rotate(180deg);
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius:  0px 0px 10px 10px;
+    height: 30px;
+    background-color: #ed1d24;
+    animation: animeUp .5s ;
+}
+
+.cardPerson:hover::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    transform: rotate(180deg);
+    right: 0;
+    top: 0;
+    width: 100%;
+    border-radius:  0px 0px 10px 10px;
+    height: 30px;
+    background-color: #ed1d24;
+    animation: animeUp .5s ;
+}
+
+@keyframes animeUp {
+    from {
+        transform: translate3d(90px);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0px);
+        opacity: 1;
+    }
+}
+
+
+.cardPerson img {
+    margin-top: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+.cardPerson p {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.container{
+    background-color: white; 
+    border-radius: 20px;
+
+}
+
+.loading{
+    width:100%;
+    background-color: white;
+}
+
+.loading img {
+    width: 500px;
+    height: 500px;
+    margin-bottom: 30px;
+}
+@media(max-width:800px){
+    .App{
+        margin-left: 20%;
+
+    }
+}
+
+@media(max-width:1400px)and (min-width:801px){
+    .App{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+

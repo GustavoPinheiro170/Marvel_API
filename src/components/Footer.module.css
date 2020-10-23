@@ -1,0 +1,22 @@
+.Footer{
+    overflow: hidden;
+}
+
+.spanRed{
+    margin-top: 3%;
+    width: 100vw;
+    height: 6px;
+    background-color: #ed1d24;
+    border: none;
+}
+
+.containerFooter{
+    margin-top: 5%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 105px;
+    background-color: #e6e7e8;
+}

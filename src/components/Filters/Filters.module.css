@@ -1,0 +1,25 @@
+.container{
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: white; 
+    border-radius: 20px;
+}
+
+.InputSearch {
+    width: 385px;
+    height: 51px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid gray;
+    box-shadow: 0px 6px 6px -5px grey;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    
+
+}
+.containerInput{
+    margin-left: 5%;
+    background-color: white;
+    border-radius: 20px;
+}
