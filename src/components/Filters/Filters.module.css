@@ -23,3 +23,19 @@
     background-color: white;
     border-radius: 20px;
 }
+
+@media(max-width:800px ){
+
+    .InputSearch{
+    width: 92%;
+    height: 51px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid grey;
+    box-shadow: 0 6px 6px -5px grey;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-right: 13px;
+    }
+}
