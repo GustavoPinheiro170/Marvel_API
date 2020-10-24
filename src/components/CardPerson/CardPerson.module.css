@@ -109,9 +109,15 @@
     height: 500px;
     margin-bottom: 30px;
 }
-@media(max-width:800px){
+@media(max-width:399px){
     .App{
-        margin-left: 8%;
+        margin-left: 2%;
+    }
+}
+
+@media(min-width:400px)and ( max-width: 800px){
+    .App{
+        margin-left: 13%;
     }
 }
 
