@@ -11,7 +11,7 @@ function App() {
 
 // Define qual FETCH será realizado de acordo com o term
   function dataAPI(){
-    if(term === '' ||  term.length < 3){
+    if(term === '' ||  term.length < 3 || term === null){
       return data;
     }else {
       return namePerson
