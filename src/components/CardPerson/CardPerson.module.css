@@ -111,7 +111,13 @@
 }
 @media(max-width:399px){
     .App{
-        margin-left: 2%;
+        margin-left: 8%;
+    }
+    .loading img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: 30px;
     }
 }
 
@@ -119,12 +125,24 @@
     .App{
         margin-left: 13%;
     }
+    .loading img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: 30px;
+    }
 }
 
 @media(max-width:1400px)and (min-width:801px){
     .App{
         margin-left: 2%;
         margin-right: 2%;
+    }
+    .loading img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: 30px;
     }
 }
 

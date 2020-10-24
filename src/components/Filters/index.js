@@ -48,7 +48,7 @@ const Filters  = () =>  {
       
       <FontAwesomeIcon
         icon={faFilter}
-        style={{color:'#ed1d24', margin:'0px 10px', fontSize: '20px'}}
+        style={{color:'#ed1d24', margin:'0px 10px', fontSize: '20px' }}
         />
           <select value={select} onChange={(e) => OrderBy(e.target.value)  } >
           <option>A - Z</option>

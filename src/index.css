@@ -51,6 +51,7 @@ select {
     cursor: pointer;
     padding: 10px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 option:hover{
