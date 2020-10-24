@@ -58,10 +58,13 @@ export const UserStorage = ({children}) => {
   
     //  Retorna o filtro pelo Input - necessário digitar o nome completo neste caso
      function searchingFor(term) {
-        return  (param) => {
-        return (
-         param.name.toLowerCase().includes(term.toLowerCase()) || !term
-        );}}
+        return (param) => {
+         return param.name.toLowerCase().includes(term.toLowerCase()) || !term
+        }
+        }
+    
+
+
 
     
                 
@@ -72,7 +75,7 @@ export const UserStorage = ({children}) => {
           for(let i = 0; i < 50; i++){
                arrayPages.push(i)
           }
-          
+
           if(term === '')
           fetchAPI(currentPage ? currentPage : 0, showAll ? showAll : 12); 
           setPages(arrayPages);
