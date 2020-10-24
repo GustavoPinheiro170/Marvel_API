@@ -59,14 +59,11 @@ export const UserStorage = ({children}) => {
     //  Retorna o filtro pelo Input - necessário digitar o nome completo neste caso
      function searchingFor(term) {
         return (param) => {
-         return param.name.toLowerCase().includes(term.toLowerCase()) || !term
-        }
+             return param.name.toLowerCase().includes(term.toLowerCase()) || !term
+            }
         }
     
-
-
-
-    
+ 
                 
     //Executa a API Data
     //  Realiza a contagem de pagians para realizar a paginação;

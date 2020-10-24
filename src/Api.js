@@ -6,7 +6,6 @@ const privateKey = '2030a5f353675913c336f5f81a717c65d4da0673'
 const ts = Math.floor(Date.now() / 1000);
 const convertMD5 = CryptoJs.MD5(ts+privateKey+publicKey)
 
-
 // Retorna a url com os parametros para realizar o GET com offset, limit e orderBy
 export function FETCH_API(offset, limit, orderBY) {
     return {
