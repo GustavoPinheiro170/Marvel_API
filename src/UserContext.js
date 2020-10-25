@@ -8,16 +8,25 @@ export const UserContext = React.createContext();
 export const UserStorage = ({children}) => {
     // Estados gerais da aplicação
     const [data, setData] = React.useState(null);
+
+    // Estados paginação
     const [pages, setPages] = React.useState([]);
-    const [term, setTerm] = React.useState('');
     const [total, setTotal] = React.useState(12);
     const [currentPage, setCurrentPage] = React.useState(0);
- 
     const [showAll, setShowAll] = React.useState(12);
     const [loading, setLoading] = React.useState('');
-    const [select , setSelect] = React.useState('');
+
+    // Estados filtros
     const [namePerson , setNamePerson] = React.useState('');
     const [order , setOrder] = React.useState('name');
+    const [select , setSelect] = React.useState('');
+    const [term, setTerm] = React.useState('');
+
+    // Estados Modal 
+    const [dataModal , setDataModal] = React.useState('');
+    const [ modal, setModal]= React.useState(false);
+    const [ images, setImages]= React.useState('');
+    const [ urls, setUrls]= React.useState('');
     const lastPage = pages[pages.length -1];
 
 
@@ -36,8 +45,6 @@ export const UserStorage = ({children}) => {
                 return null;
             }
         } 
-        
-
 
     // Faz o GET com o nome do personagem para realizar o filtro
      async function filterPerson(name){
@@ -55,15 +62,28 @@ export const UserStorage = ({children}) => {
                  return null
              }
      }  
-  
+     
+    async function modalFilter(name){
+        try {
+        setLoading(Loading)
+        const { url } =  FETCH_API_FILTER(name);
+        const response = await fetch(url);
+        const json = await response.json();
+        setDataModal(json.data.results[0]);  
+        setImages(json.data.results[0].thumbnail);
+        setUrls(json.data.results[0].urls);
+    } catch(error) {
+            return null
+        }
+     }
+
     //  Retorna o filtro pelo Input - necessário digitar o nome completo neste caso
      function searchingFor(term) {
         return (param) => {
              return param.name.toLowerCase().includes(term.toLowerCase()) || !term
             }
         }
-    
- 
+
                 
     //Executa a API Data
     //  Realiza a contagem de pagians para realizar a paginação;
@@ -72,7 +92,6 @@ export const UserStorage = ({children}) => {
           for(let i = 0; i < 50; i++){
                arrayPages.push(i)
           }
-
           if(term === '')
           fetchAPI(currentPage ? currentPage : 0, showAll ? showAll : 12); 
           setPages(arrayPages);
@@ -92,6 +111,11 @@ return (
         select,
         namePerson,
         order,
+        modal,
+        dataModal,
+        images,
+        urls,
+        setModal,
         setOrder,
         setNamePerson,
         setSelect,
@@ -103,6 +127,9 @@ return (
         setLoading,
         searchingFor,
         filterPerson,
+        modalFilter,
+        setDataModal,
+    
 
 
     }}>{children}</UserContext.Provider>

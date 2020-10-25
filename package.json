@@ -1,7 +1,7 @@
 {
   "name": "marvel",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

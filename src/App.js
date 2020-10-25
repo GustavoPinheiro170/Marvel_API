@@ -2,12 +2,13 @@ import React from 'react';
 import { UserContext } from './UserContext';
 import CardPerson from './components/CardPerson/Index.js';
 import Filters from './components/Filters';
+import Modal from './components/Modal';
 
 
 
 function App() {
 
- const {data, namePerson, term} = React.useContext(UserContext);
+ const {data, namePerson, term, dataModal, setModal, modal} = React.useContext(UserContext);
 
 // Define qual FETCH será realizado de acordo com o term
   function dataAPI(){
@@ -17,11 +18,16 @@ function App() {
       return namePerson
     }
   }
-  
+function ModalFilter(){ if(dataModal !== null) return dataModal; else return null}
+
+function closeModal(){ if (modal === true) return setModal(false); }
+
+
   return (
-    <div className='container'>
+    <div className='container' onClick={closeModal}>
         <Filters />
         <CardPerson data={dataAPI()} />
+        <Modal data={ModalFilter()} />
     </div>
   );
 }

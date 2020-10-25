@@ -15,6 +15,9 @@
     
 }
 
+.cardPerson{
+    transition: .2s;
+}
 .cardPerson:hover {
      background-color: #313131;
     }
@@ -94,6 +97,11 @@
     padding-left: 1%;
     padding-right: 1%;
 }
+
+.cardPerson h2:hover {
+    color: red;
+    cursor: pointer;
+}
 .container{
     background-color: white; 
     border-radius: 20px;
@@ -119,6 +127,4 @@
         margin-bottom: 30px;
     }
 }
-
-
 

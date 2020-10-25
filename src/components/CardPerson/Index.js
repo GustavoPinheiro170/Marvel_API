@@ -11,23 +11,31 @@ const CardPerson = ({data}) =>  {
         searchingFor, 
         term, 
         loading,
+        modalFilter,
+        setModal,
          } = React.useContext(UserContext);
 
+
+    function handleModal(target){
+        setModal(true)
+        modalFilter(target.target.innerText)
+    }
     return ( 
 
     <div className={styles.container}>
      <div className={styles.App} >
         {data ? data.filter(searchingFor(term)).map((element) => {
             return (
-                <div className={styles.cardPerson} key={element.id}>
+                <div  onClick={(e) => handleModal(e)} className={styles.cardPerson} key={element.id}>
                 <img src={`${element.thumbnail.path}.${element.thumbnail.extension}`} alt={element.name}/>
                 <h2 >{element.name} </h2>
                 <span className={styles.Line}></span>
-                <p>{element.description}</p>
-                </div>
+                <p>{element.description}</p>        
+                </div> 
              );}) : <div className={styles.loading}>{loading}</div> }
-         
+ 
         </div>
+        
         <Pagination />
      </div>
       
