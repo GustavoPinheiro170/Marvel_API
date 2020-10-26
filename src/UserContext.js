@@ -62,6 +62,7 @@ export const UserStorage = ({children}) => {
                  return null
              }
      }  
+
      
     async function modalFilter(name){
         try {
@@ -84,7 +85,16 @@ export const UserStorage = ({children}) => {
             }
         }
 
-                
+    // Função de abrir e fechar modal
+        function handleModal(target){
+            if(modal === false) {
+            setModal(true)
+            modalFilter(target.target.innerText)
+        }
+            else {
+                setModal(false);
+            }
+        }       
     //Executa a API Data
     //  Realiza a contagem de pagians para realizar a paginação;
     React.useEffect(() =>  {
@@ -95,7 +105,14 @@ export const UserStorage = ({children}) => {
           if(term === '')
           fetchAPI(currentPage ? currentPage : 0, showAll ? showAll : 12); 
           setPages(arrayPages);
-    },[currentPage , showAll, term , order ])
+
+
+   
+
+            
+        
+   
+    },[currentPage , showAll, term , order, modal ])
   
 
 return (
@@ -129,6 +146,7 @@ return (
         filterPerson,
         modalFilter,
         setDataModal,
+        handleModal
     
 
 
