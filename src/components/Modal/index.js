@@ -9,8 +9,8 @@ const Modal = (namePerson) => {
     const {  modal, images,  urls, loading, handleModal } = React.useContext(UserContext);
 
     return ( 
-        <div >
-         {modal ? <div className={styles.modal}  onFocus={ handleModal} onClick={handleModal}> 
+        <div>
+         {modal ? <div className={styles.modal}  onFocus={ handleModal} onClick={handleModal} > 
          {images ? <img src={`${images.path}.${images.extension}`}  alt={data.name}/> :<div className={styles.loading}>{loading}</div> }
             <h2>{data.name }</h2> 
             <hr></hr>

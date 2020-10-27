@@ -17,6 +17,8 @@
     padding: 20px;
     animation:  animateUp .3s ;
     transition: .3s;
+    background-size: cover;
+
 }
 
 .modal p {
