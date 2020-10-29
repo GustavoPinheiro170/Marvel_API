@@ -6,11 +6,11 @@ import styles from './Modal.module.css';
 
 const Modal = (namePerson) => {
     const data = namePerson.data;
-    const {  modal, images,  urls, loading, handleModal } = React.useContext(UserContext);
+    const {  modal, images,  urls, loading} = React.useContext(UserContext);
 
     return ( 
-        <div>
-         {modal ? <div className={styles.modal}  onFocus={ handleModal} onClick={handleModal} > 
+        <div className={styles.modalContainer}>
+         {modal ? <div className={styles.modal}  > 
          {images ? <img src={`${images.path}.${images.extension}`}  alt={data.name}/> :<div className={styles.loading}>{loading}</div> }
             <h2>{data.name }</h2> 
             <hr></hr>

@@ -1,3 +1,7 @@
+
+.modalContainer{
+    background-color:black;
+}
 .modal {
     justify-content: center;
     align-items: center;
