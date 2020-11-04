@@ -8,7 +8,7 @@ import Modal from './components/Modal';
 
 function App() {
 
- const {data, namePerson, term, dataModal , handleModal} = React.useContext(UserContext);
+ const {data, namePerson, term, dataModal } = React.useContext(UserContext);
 
 // Define qual FETCH será realizado de acordo com o term
   function dataAPI(){
@@ -24,7 +24,7 @@ function ModalFilter(){ if(dataModal !== null) return dataModal; else return nul
     <>
     <div className='container' >
         <Filters />
-        <CardPerson data={dataAPI()} onClick={handleModal} />
+        <CardPerson data={dataAPI()}  />
     </div>
         <Modal data={ModalFilter()} />
     </>

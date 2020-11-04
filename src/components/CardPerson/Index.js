@@ -15,9 +15,9 @@ const CardPerson = ({data}) =>  {
      <div className={styles.App} >
         {data ? data.filter(searchingFor(term)).map((element) => {
             return (
-                <div  onClick={(e) => handleModal(e)}   className={styles.cardPerson} key={element.id}>
+                <div  className={styles.cardPerson} key={element.id}>
                 <img src={`${element.thumbnail.path}.${element.thumbnail.extension}`} alt={element.name}/>
-                <h2 >{element.name} </h2>
+                <h2 onClick={(e) => handleModal(e)}  >{element.name} </h2>
                 <span className={styles.Line}></span>
                 <p>{element.description}</p>
                 {}        
