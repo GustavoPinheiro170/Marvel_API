@@ -22,9 +22,9 @@ function ModalFilter(){ if(dataModal !== null) return dataModal; else return nul
 
   return (
     <>
-    <div className='container' onClick={handleModal}>
+    <div className='container' >
         <Filters />
-        <CardPerson data={dataAPI()} />
+        <CardPerson data={dataAPI()} onClick={handleModal} />
     </div>
         <Modal data={ModalFilter()} />
     </>
